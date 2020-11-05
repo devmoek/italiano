@@ -94,3 +94,14 @@ for (let item of items) {
     item.addEventListener("keypress", toggleItem, false);
 }
 document.addEventListener("click", closeSubmenu, false);
+
+// responsive nav menu
+
+function myFunction() {
+    let x = document.getElementById("navMenu");
+    if (x.className === "menu") {
+        x.className += " responsive";
+    } else {
+        x.className = "navMenu";
+    }
+}

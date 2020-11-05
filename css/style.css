@@ -244,10 +244,6 @@ header {
     list-style-type: none;
 }
 
-.submenu {
-    width: 10vw;
-}
-
 .submenu li {
     width: 100%;
 }
@@ -552,8 +548,6 @@ header {
 }
 
 /* Mobile menu */
-@media only screen and (min-width: 400px) {
-
     .menu {
         display: flex;
         flex-wrap: wrap;
@@ -572,7 +566,6 @@ header {
     }
 
     .menu li.sub_item a {
-        padding: 15px;
         z-index: 999;
     }
 
@@ -629,10 +622,9 @@ header {
         border-radius: 3px;
         justify-content: center;
     }
-}
+
 
 /* Desktop menu */
-@media all and (min-width: 800px) {
     .menu {
         align-items: flex-start;
         flex-wrap: nowrap;
@@ -670,5 +662,12 @@ header {
     .submenu-active {
         border-radius: 0;
     }
-}
 
+
+    @media screen and (max-width: 950px) {
+        html {
+            display: none;
+        }
+
+
+    }
