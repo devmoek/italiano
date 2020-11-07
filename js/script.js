@@ -96,12 +96,3 @@ for (let item of items) {
 document.addEventListener("click", closeSubmenu, false);
 
 // responsive nav menu
-
-function myFunction() {
-    let x = document.getElementById("navMenu");
-    if (x.className === "menu") {
-        x.className += " responsive";
-    } else {
-        x.className = "navMenu";
-    }
-}

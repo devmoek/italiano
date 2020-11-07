@@ -15,7 +15,6 @@ header {
     background-color: #353436;
     font-family: sans-serif;
     font-size: 1.125rem;
-    line-height: 1.33;
     letter-spacing: normal;
     text-transform: uppercase;
 }
@@ -29,6 +28,7 @@ header {
     color: #fff;
     float: right;
     position: relative;
+    cursor: pointer;
 }
 
 .menu a {
@@ -47,6 +47,11 @@ header {
     padding: 22px;
     width: 20%;
     height: 20%;
+    order: 0;
+}
+
+.logo img {
+    width: 90%;
 }
 
 /* reserve thing on right top */
@@ -252,7 +257,7 @@ header {
     width: 100%;
     content: "";
     display: block;
-    border-bottom: 2px solid #e2d1a6;
+    border-bottom: 1px solid #fff;
     position: relative;
 }
 
@@ -295,11 +300,8 @@ header {
 
 .box {
     position: absolute;
-    width: 26vw;
-    height: 14vh;
     background: #fff;
     opacity: 0.9;
-    text-align: start;
     padding-left: 15px;
     right: 0;
     bottom: 50%;
@@ -396,7 +398,7 @@ header {
 .dropbtn {
     position: absolute;
     display: inline-block;
-    width: 5vw;
+    width: 100px;
     font-size: 2rem;
     border: none;
     outline: none;
@@ -432,7 +434,7 @@ header {
     width: 100%;
     padding-top: 40px;
     padding-bottom: 20px;
-    height: 350px;
+    height: auto;
     background-color: #353436;
     color: #fff;
 }
@@ -522,6 +524,7 @@ header {
 
 .social a {
     color: #fff;
+    padding: 10px;
 }
 
 .social a:hover,
@@ -547,12 +550,9 @@ header {
     align-items: center;
 }
 
-/* Mobile menu */
     .menu {
         display: flex;
-        flex-wrap: wrap;
         justify-content: space-between;
-        align-items: center;
         background-color: #353436;
     }
 
@@ -570,9 +570,7 @@ header {
     }
 
     .toggle {
-        order: 1;
-        font-size: 1.25rem;
-        color: #fff;
+        visibility: hidden;
     }
 
     .item.button {
@@ -599,10 +597,6 @@ header {
         display: none;
     }
 
-    .submenu-active .submenu {
-        display: block;
-    }
-
     .has-submenu i {
         font-size: 0.75rem;
     }
@@ -614,25 +608,9 @@ header {
         padding-left: 5px;
     }
 
-    .sub_item a {
-        padding: 10px 15px;
-    }
-
     .submenu-active {
         border-radius: 3px;
         justify-content: center;
-    }
-
-
-/* Desktop menu */
-    .menu {
-        align-items: flex-start;
-        flex-wrap: nowrap;
-        background: none;
-    }
-
-    .logo {
-        order: 0;
     }
 
     .item {
@@ -655,10 +633,6 @@ header {
         background: #353436;
     }
 
-    .toggle {
-        display: none;
-    }
-
     .submenu-active {
         border-radius: 0;
     }
@@ -666,4 +640,65 @@ header {
 
     @media screen and (max-width: 950px) {
 
+        .menu {
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .menu li a {
+            font-size: 14px;
+        }
+
+        .main {
+            flex-direction: column;
+        }
     }
+
+@media screen and (max-width: 768px) {
+    nav {
+        position: relative;
+    }
+
+    .menu {
+        background: #353436;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .submenu {
+        float: none;
+    }
+
+    .submenu-active .submenu {
+        display: block;
+    }
+
+    .submenu li {
+        position: relative;
+    }
+
+    .toggle {
+        position: absolute;
+        cursor: pointer;
+        right: 1%;
+        color: #fff;
+        visibility: visible;
+        transform: translate(-5%, -10%);
+        clip-path: circle(100px);
+    }
+
+    .pageFooter {
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .block h3 {
+        font-size: 15px;
+    }
+
+    .row {
+        margin: 0;
+    }
+
+}
