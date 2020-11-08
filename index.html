@@ -83,18 +83,36 @@
                 <li class="item has-submenu">
                     <a tabindex="0">Home</a>
                     <ul class="submenu">
-                        <li class="sub_item"><a href="#">Storia</a></li>
-                        <li class="_sub_item"><a href="#">MM Design</a></li>
-                        <li class="sub_item"><a href="#">Designer</a></li>
-                        <li class="sub_item"><a href="#">Certificazioni</a></li>
+                        <li class="sub_item">
+                            <a href="#">Storia</a>
+                        </li>
+                        <li class="_sub_item">
+                            <a href="#">MM Design</a>
+                        </li>
+                        <li class="sub_item">
+                            <a href="#">Designer</a>
+                        </li>
+                        <li class="sub_item">
+                            <a href="#">Certificazioni</a>
+                        </li>
                     </ul>
                 </li>
-                <li class="item"><a href="#">Azienda</a></li>
-                <li class="item"><a href="#">Collezioni</a></li>
-                <li class="item"><a href="#">News</a></li>
-                <li class="item"><a href="#">Contati</a></li>
-                <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+                <li class="item">
+                    <a href="#">Azienda</a>
+                </li>
+                <li class="item">
+                    <a href="#">Collezioni</a>
+                </li>
+                <li class="item">
+                    <a href="#">News</a>
+                </li>
+                <li class="item">
+                    <a href="#">Contati</a>
+                </li>
             </ul>
+                <div class="hamburger-menu">
+                    <a href="#" onclick="myFunction()"><i class="fas fa-bars"></i></a>
+                </div>
         </nav>
     </header>
 
@@ -165,44 +183,55 @@
         <div class="inner">
             <div class="row">
                 <div class="block">
+                    <div class="block__title">
                         <h3>Lampdari made in Italy</h3>
-
+                    </div>
+                        <div class="block__subtitle">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis dolor ducimus esse in, ipsa laboriosam maxime, natus necessitatibus nemo nesciunt odio provident quidem, quod reiciendis repellat repudiandae similique suscipit.</p>
+                        </div>
                 </div>
 
                 <div class="block">
+                    <div class="block__title">
+
                         <h3>Lampadari artigianali</h3>
-
+                    </div>
+                        <div class="block__subtitle">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis dolor ducimus esse in, ipsa laboriosam maxime, natus necessitatibus nemo nesciunt odio provident quidem, quod reiciendis repellat repudiandae similique suscipit.</p>
+
+                        </div>
                 </div>
 
                 <div class="block">
+                    <div class="block__title">
                     <h3>45 anni di esperienza</h3>
+                    </div>
 
+                    <div class="block__subtitle">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid architecto distinctio, doloremque eaque, ex explicabo, illo inventore iste maxime molestiae non quaerat voluptas? Consequatur eius, maiores minima officiis possimus suscipit!</p>
+                    </div>
                 </div>
 
                 <div class="block">
-
                     <div class="newsletter">
-                    <h3>Newsletter</h3>
+                        <div class="newsletter__title">
+                             <h3>Newsletter</h3>
+                        </div>
+                        <div class="newsletter__body">
+                            <label>
+                                <input type="text" placeholder="Nome e Cognome" name="fname" required>
+                            </label>
 
-                    <label>
-                        <input type="text" placeholder="Nome e Cognome" name="fname" required>
-                    </label>
-
-                    <label>
-                        <input type="email" placeholder="E-mail" name="email" required>
-                    </label>
-
+                            <label>
+                                <input type="email" placeholder="E-mail" name="email" required>
+                            </label>
                         <div class="preference">
                             <input type="checkbox" id="newsletters" value="Mi-iscrivo-alla-Newsletter">
                             <label for="newsletters">Acconsento al trattamento dei dati</label>
-
                         </div>
 
                         <button type="submit">Iscriviti</button>
-
+                        </div>
 
                     </div>
                 </div>
@@ -211,33 +240,36 @@
 
             <div class="legal">
                 <div class="info">
-                <p>MMLAMPADARI srl</p>
-                <p>Via Feltrina 00</p>
-                <p>31111 Pederobba (TV)</p>
-                <p>0423.123456</p>
-                <p>info@mmlampadari.mm</p>
-                <p>P.IVA 04123456789</p>
+                    <p>MMLAMPADARI srl</p>
+                    <p>Via Feltrina 00</p>
+                    <p>31111 Pederobba (TV)</p>
+                    <p>0423.123456</p>
+                    <p>info@mmlampadari.mm</p>
+                    <p>P.IVA 04123456789</p>
                 </div>
                 <div class="social">
+                    <div class="social__links">
                     <a href="#"><i class="fab fa-facebook-square"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
                 </div>
 
                 <div class="languages">
-                    <a href="#">ITA</a>
-                    <span>|</span>
-                    <a href="#">ENG</a>
-                    <span>|</span>
-                    <a href="#">DEU</a>
-                    <span>|</span>
-                    <a href="#">РУС</a>
-                </jdiv>
+                    <div class="languages__links">
+                        <a href="#">ITA</a>
+                        <span>|</span>
+                        <a href="#">ENG</a>
+                        <span>|</span>
+                        <a href="#">DEU</a>
+                        <span>|</span>
+                        <a href="#">РУС</a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
 </div>
-
 
 <script src="https://kit.fontawesome.com/7f5939307a.js" crossorigin="anonymous"></script>
 <script src="js/script.js"></script>

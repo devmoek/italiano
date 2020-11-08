@@ -95,4 +95,8 @@ for (let item of items) {
 }
 document.addEventListener("click", closeSubmenu, false);
 
-// responsive nav menu
+// hamburger menu
+
+function myFunction() {
+
+}
