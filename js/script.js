@@ -1,7 +1,10 @@
 // const
-const openModalButtons = document.querySelectorAll('[data-modal-target]')
-const closeModalButtons = document.querySelectorAll('[data-close-button]')
-const overlay = document.getElementById('overlay')
+const openModalButtons = document.querySelectorAll('[data-modal-target]');
+const closeModalButtons = document.querySelectorAll('[data-close-button]');
+const overlay = document.getElementById('overlay');
+const toggle = document.querySelector(".toggle");
+const menu = document.querySelector(".menu");
+const items = document.querySelectorAll(".item");
 
 // eventListeners
 openModalButtons.forEach(button => {
@@ -49,11 +52,7 @@ setInterval(function () {
     }
 }, 5000);
 
-const toggle = document.querySelector(".toggle");
-const menu = document.querySelector(".menu");
-const items = document.querySelectorAll(".item");
-
-// Toggle mobile menu
+// submenu
 function toggleMenu() {
     if (menu.classList.contains("active")) {
         menu.classList.remove("active");
@@ -64,7 +63,6 @@ function toggleMenu() {
     }
 }
 
-// Activate Submenu
 function toggleItem() {
     if (this.classList.contains("submenu-active")) {
         this.classList.remove("submenu-active");
@@ -96,7 +94,3 @@ for (let item of items) {
 document.addEventListener("click", closeSubmenu, false);
 
 // hamburger menu
-
-function myFunction() {
-
-}
