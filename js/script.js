@@ -56,10 +56,8 @@ setInterval(function () {
 function toggleMenu() {
     if (menu.classList.contains("active")) {
         menu.classList.remove("active");
-        toggle.querySelector("a").innerHTML = "<i class='fas fa-bars'></i>";
     } else {
         menu.classList.add("active");
-        toggle.querySelector("a").innerHTML = "<i class='fas fa-times'></i>";
     }
 }
 
@@ -94,3 +92,8 @@ for (let item of items) {
 document.addEventListener("click", closeSubmenu, false);
 
 // hamburger menu
+
+function changeToggle(e) {
+    e.classList.toggle("change");
+}
+

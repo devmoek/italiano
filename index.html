@@ -77,24 +77,30 @@
             </div>
             <div id="overlay"></div>
         </div>
-
-        <nav>
-            <ul class="menu" id="navMenu">
+        <nav id="navMenu">
+            <ul class="menu">
                 <li class="item has-submenu">
                     <a tabindex="0">Home</a>
+                    <div class="menu__dropdown">
                     <ul class="submenu">
                         <li class="sub_item"><a href="#">Storia</a></li>
                         <li class="_sub_item"><a href="#">MM Design</a></li>
                         <li class="sub_item"><a href="#">Designer</a></li>
                         <li class="sub_item"><a href="#">Certificazioni</a></li>
                     </ul>
+                    </div>
                 </li>
                 <li class="item"><a href="#">Azienda</a></li>
                 <li class="item"><a href="#">Collezioni</a></li>
                 <li class="item"><a href="#">News</a></li>
                 <li class="item"><a href="#">Contati</a></li>
-                <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
             </ul>
+
+            <div class="toggle" onclick="changeToggle(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
         </nav>
     </header>
 
@@ -151,16 +157,12 @@
             </div>
         </div>
             <div class="dropup">
-                    <div class="dropup__content">
-                        <div class="dropup__button">
-                            <button class="dropbtn"><i class="fas fa-chevron-up"></i></button>
-                        </div>
-                             <ul class="dropdown__menu">
-                                 <li class="items">Hello</li>
-                              <li class="items">World</li>
-                              <li class="items">!</li>
-                            </ul>
-                     </div>
+                <a href="#" class="dropbtn fas fa-chevron-up"></a>
+                    <div class="dropdown__menu">
+                        <div class="dropdown__items">Hello</div>
+                        <div class="dropdown__items">World</div>
+                        <div class="dropdown__items">!</div>
+                    </div>
              </div>
     </section>
     <footer class="pageFooter">
@@ -168,7 +170,7 @@
             <div class="row">
                 <div class="block">
                     <div class="block__title">
-                    <h3>Lampdari made in Italy</h3>
+                    <h3>Lampadari made in Italy</h3>
                     </div>
                     <div class="block__subtitle">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis dolor ducimus esse in, ipsa laboriosam maxime, natus necessitatibus nemo nesciunt odio provident quidem, quod reiciendis repellat repudiandae similique suscipit.</p>
@@ -246,8 +248,7 @@
                     <a href="#">DEU</a>
                     <span>|</span>
                     <a href="#">РУС</a>
-                    </jdiv>
-                </div>
+                    </div>
             </div>
         </div>
     </footer>

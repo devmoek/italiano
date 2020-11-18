@@ -100,10 +100,6 @@ header {
     color: #e2d1a6;
 }
 
-.reserve a:active {
-    color: #8b7334;
-}
-
 .modal {
     position: fixed;
     top: 50%;
@@ -273,6 +269,11 @@ header {
 
 .submenu {
     display: none;
+}
+
+.dropdown__menu {
+    float: left;
+    overflow: hidden;
 }
 
 .has-submenu i {
@@ -454,19 +455,14 @@ header {
 .dropup {
     width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 9998;
+    justify-content: center;
+    align-self: center;
+    flex-wrap: wrap;
 }
 
 .dropup__content {
-    display: none;
+    align-items: center;
 }
-
-
 
 .dropup__button {
     font-size: 2rem;
@@ -475,18 +471,33 @@ header {
     border-radius: 5px;
     margin: 0 auto;
     position: absolute;
+
 }
 
 .dropbtn {
-    display: flex;
+    color: #000;
+    background-color: #fff;
+    text-align: center;
+    font-size: 2rem;
+    padding: 0.05em 0.75em;
+}
+
+.dropbtn:hover ~ .dropdown__menu {
+    display: inline-flex;
+}
+
+.dropdown__menu {
+    width: 100%;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown__items {
+    width: 33%;
 }
 
 /* dropup
-
-
-
-
-
 .dropup {
     width: 62%;
     display: inline-flex;
@@ -647,12 +658,36 @@ header {
 .languages span {
     align-items: center;
 }
+
 .toggle {
     visibility: hidden;
 }
 
 .toggle a {
     color: #fff;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+    border-radius: 5px;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
 }
 
 .button.secondary {
@@ -710,31 +745,18 @@ header {
         justify-content: center;
     }
 
-    .toggle {
-        position: absolute;
-        cursor: pointer;
-        right: 1%;
-        visibility: visible;
-        transform: translate(-5%, -10%);
-        clip-path: circle(100px);
-        width: 5%;
+    .newsletter_body input {
+        width: 100%;
+    }
+
+    .newsletter_body button {
+        height: 9vh;
+        font-size: 1.3em;
     }
 
     .toggle:checked + .menu {
         display: block;
     }
-
-    .menu a {
-        display: block;
-        height: 10vh;
-    }
-
-    .has-submenu:checked + .submenu {
-        display: block;
-        border: 1px solid red;
-
-    }
-
     .block {
         margin: 15px 0;
     }
@@ -746,9 +768,6 @@ header {
         cursor: pointer;
         right: 1%;
         visibility: visible;
-        transform: translate(-5%, -10%);
-        clip-path: circle(100px);
-        width: 5%;
     }
 
     .modal {
@@ -786,77 +805,4 @@ header {
         display: block;
         height: 10vh;
     }
-}
-
-/*
-    @media screen and (max-width: 1200px) {
-        .main {
-            max-width: 970px;
-        }
-    }
-
-@media screen and (max-width: 992px) {
-    .main {
-        max-width: 750px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .main {
-        max-width: none;
-    }
-}
-
-/*
-    @media screen and (max-width: 950px) {
-
-        .menu {
-            flex-wrap: wrap;
-            align-items: center;
-        }
-
-        .menu li a {
-            font-size: 14px;
-        }
-
-        .main {
-            flex-direction: column;
-        }
-    }
-
-@media screen and (max-width: 768px) {
-    nav {
-        position: relative;
-    }
-
-    .menu {
-        background: #353436;
-        height: 70vh;
-        width: 100%;
-        flex-direction: column;
-    }
-
-    .toggle {
-        position: absolute;
-        cursor: pointer;
-        right: 1%;
-        color: #fff;
-        visibility: visible;
-        transform: translate(-5%, -10%);
-        clip-path: circle(100px);
-    }
-
-    .pageFooter {
-        overflow: hidden;
-        width: 100%;
-    }
-
-    .block h3 {
-        font-size: 15px;
-    }
-
-    .row {
-        margin: 0;
-    }
-
 }
