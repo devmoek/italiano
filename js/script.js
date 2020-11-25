@@ -97,3 +97,13 @@ function changeToggle(e) {
     e.classList.toggle("change");
 }
 
+/*
+function hamburger() {
+    let e = document.getElementsByClassName("menu")
+    if (e.style.display === "block") {
+        e.style.display = "none";
+    } else {
+        e.style.display = "block";
+    }
+}
+*/
