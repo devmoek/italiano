@@ -79,21 +79,25 @@
         </div>
         <nav id="navMenu">
             <ul class="menu">
-                <li class="item has-submenu">
-                    <a tabindex="0">Home</a>
-                    <div class="menu__dropdown">
-                    <ul class="submenu">
-                        <li class="sub_item"><a href="#">Storia</a></li>
-                        <li class="_sub_item"><a href="#">MM Design</a></li>
-                        <li class="sub_item"><a href="#">Designer</a></li>
-                        <li class="sub_item"><a href="#">Certificazioni</a></li>
-                    </ul>
-                    </div>
+                <li>
+                    <a href="#">Home</a>
+                    
                 </li>
-                <li class="item"><a href="#">Azienda</a></li>
-                <li class="item"><a href="#">Collezioni</a></li>
-                <li class="item"><a href="#">News</a></li>
-                <li class="item"><a href="#">Contati</a></li>
+                <li class="item has-submenu">
+                    
+                    <a href="#">Azienda</a>
+                    <ul class="submenu menu__dropdown">
+                        <li class="sub_item"><a href="#">Storia</a></li>
+                        <li class="sub_item"><a href="#">MM Design</a></li>
+                        <li class="sub_item"><a href="#">Designer</a></li>
+                        <li class="sub_item last"><a href="#">Certificazioni</a></li>
+                    </ul>
+                
+                </li>
+
+                <li><a href="#">Collezioni</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Contati</a></li>
             </ul>
 
             <div class="toggle" onclick="changeToggle(this)">
@@ -144,27 +148,31 @@
                     </div>
                     <img alt="kitchen" src="img/bg.jpg">
                 </div>
+
                 <div class="navigation-auto">
                     <div class="auto-btn1"></div>
                     <div class="auto-btn2"></div>
                     <div class="auto-btn3"></div>
                 </div>
-            </div>
+           
             <div class="navigation-manual">
                 <label class="manual-btn" for="radio1"></label>
                 <label class="manual-btn" for="radio2"></label>
                 <label class="manual-btn" for="radio3"></label>
             </div>
         </div>
-            <div class="dropup">
-                <a href="#" class="dropbtn fas fa-chevron-up"></a>
-                    <div class="dropdown__menu">
-                        <div class="dropdown__items">Hello</div>
-                        <div class="dropdown__items">World</div>
-                        <div class="dropdown__items">!</div>
+
+       <div class="dropup">
+                <button href="#" class="dropbtn fas fa-chevron-up"></button>
+                    <div class="dropup__content">
+                        <div class="dropup__items">Hello</div>
+                        <div class="dropup__items">World</div>
+                        <div class="dropup__items">!</div>
                     </div>
-             </div>
+        </div>
+    </div>
     </section>
+
     <footer class="pageFooter">
         <div class="inner">
             <div class="row">

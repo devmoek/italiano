@@ -97,3 +97,28 @@ function changeToggle(e) {
     e.classList.toggle("change");
 }
 
+
+// dropup button menu 
+let icon = document.querySelector('.dropbtn');
+let dropupContent = document.querySelector('.dropup__content');
+
+icon.onclick = function () {
+
+   if (icon.classList.contains('fa-chevron-down')) {
+             icon.classList.remove('fa-chevron-down');      
+             dropupContent.classList.remove('show');
+             icon.classList.toggle('fa-chevron-up');
+            
+             dropupContent.classList.toggle('dropup__content');    
+} else {
+        icon.classList.remove('fa-chevron-up');
+    
+        dropupContent.classList.remove('dropup__content');
+   }
+
+  
+   icon.classList.toggle('fa-chevron-down');
+   dropupContent.classList.toggle('show');
+  
+   console.log(dropupContent);
+}

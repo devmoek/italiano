@@ -21,17 +21,10 @@ header {
 }
 
 .menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -o-flex;
     display: flex;
     list-style: none;
-    color: #fff;
-    float: right;
-    position: relative;
     cursor: pointer;
-    margin: -5px 0;
-    padding-top: 25px;
+    justify-content: flex-end;
 }
 
 .menu a {
@@ -44,11 +37,11 @@ header {
 }
 
 .menu li {
-    margin-right: 2em;
+    padding-right: 2em;
 }
 
 .menu li a:active {
-    border: none;
+  /*  border: none;*/
 }
 
 .menu li.sub_item a {
@@ -65,7 +58,7 @@ header {
     max-width: 100%;
 }
 
-/* reserve( thing on right top) */
+/* reserve (thing on right top) */
 .reserve {
     width: 99%;
     text-align: right;
@@ -245,25 +238,32 @@ header {
     z-index: 5;
     width: 100%;
     height: 100%;
+    
 }
 
 /* navbar */
-.menu,
 .submenu {
     list-style-type: none;
 }
 
 .submenu li {
     width: 100%;
-    padding: 15px;
-
+    padding:0 10px;
+   
 }
 
+.submenu a{
+    border-bottom: 1px solid #fff;
+    line-height: 2.5rem;
+}
+.submenu .last a{
+    border-bottom: 0;
+}
 .submenu a:hover {
     width: 100%;
     content: "";
     display: block;
-    border-bottom: 1px solid #fff;
+   
     position: relative;
 }
 
@@ -299,7 +299,6 @@ header {
 .submenu-active .submenu {
     display: block;
     position: absolute;
-    left: 40px;
     top: 60px;
     z-index: 999;
     background: #353436;
@@ -310,12 +309,8 @@ header {
 }
 
 .item {
-    order: 1;
-    position: relative;
-    display: block;
-    width: 100%;
     height: auto;
-    text-align: center;
+    
 }
 
 .active .item {
@@ -330,7 +325,7 @@ header {
 .slider {
     width: 100%;
     height: auto;
-    border-radius: 10px;
+  /*  border-radius: 10px;*/
     overflow: hidden;
     position: relative;
 }
@@ -352,7 +347,7 @@ header {
 
 .slide img {
     width: 100%;
-    height: 970px;
+    height: 970px; 
 }
 
 .box {
@@ -375,6 +370,7 @@ header {
     text-transform: uppercase;
     font-size: 1.1vw;
     color: #020202;
+    
 }
 
 
@@ -382,15 +378,21 @@ header {
 .navigation-manual {
     position: absolute;
     width: 100%;
-    margin-top: -77px;
+   /* margin-top: -77px;*/
     display: flex;
     justify-content: center;
+}
+
+.navigation-manual, 
+.navigation-auto {
+    position: absolute;
+    bottom: 100px;
 }
 
 .manual-btn {
     border: 2px solid #e2d1a6;
     padding: 5px;
-    border-radius: 10px;
+    border-radius: 50%;
     cursor: pointer;
     transition: 1s;
 }
@@ -425,7 +427,7 @@ header {
     display: flex;
     width: 100%;
     justify-content: center;
-    margin-top: 897px;
+   /* margin-top: 897px;*/
 }
 
 .navigation-auto div {
@@ -456,15 +458,19 @@ header {
     width: 100%;
     display: flex;
     justify-content: center;
-    align-self: center;
+    align-items: center;
     flex-wrap: wrap;
+    flex-direction: column;
+    position:absolute;
+    bottom:0;
+    border-radius: 0%;
 }
 
 .dropup__content {
-    align-items: center;
+    align-items: center; /*объединить*/
 }
 
-.dropup__button {
+/*.dropup__button {
     font-size: 2rem;
     border: none;
     outline: none;
@@ -472,30 +478,56 @@ header {
     margin: 0 auto;
     position: absolute;
 
-}
+}*/
 
 .dropbtn {
     color: #000;
     background-color: #fff;
     text-align: center;
     font-size: 2rem;
-    padding: 0.05em 0.75em;
-}
+ /*   padding: 0.05em 0.75em;*/
+    cursor: pointer;
+    outline: none;
+    border: none;
+    width: 60px;
 
-.dropbtn:hover ~ .dropdown__menu {
-    display: inline-flex;
-}
 
-.dropdown__menu {
+   
+}
+.show{
+    display: flex;
     width: 100%;
-    display: none;
     justify-content: space-between;
-    align-items: center;
+    height: 40vh;
+   
 }
 
-.dropdown__items {
+/*
+.dropbtn:hover ~ .dropup__content {
+    display: inline-flex;
+    bottom: 100%;
+}
+*/
+
+.dropup__content {
+       display: none;
+}
+
+.dropup__items {
     width: 33%;
 }
+
+.dropup__items:first-child {
+    background-color: #e2d1a6;
+}
+
+.dropup__items:nth-child(2) {
+    background-color: #117437;
+}
+.dropup__items:last-child {
+    background-color: #1f1da5;
+}
+
 
 /* dropup
 .dropup {
@@ -696,6 +728,7 @@ header {
 }
 
 @media only screen and (min-width: 1200px) {
+
     .main {
         min-width: 100%;
     }
@@ -740,6 +773,7 @@ header {
 
 /*responsive footer*/
 @media only screen and (max-width: 700px) {
+
     .row {
         flex-direction: column;
         justify-content: center;
@@ -763,6 +797,7 @@ header {
 }
 
 @media only screen and (max-width: 890px) {
+
     .toggle {
         position: absolute;
         cursor: pointer;
