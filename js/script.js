@@ -119,6 +119,4 @@ icon.onclick = function () {
   
    icon.classList.toggle('fa-chevron-down');
    dropupContent.classList.toggle('show');
-  
-   console.log(dropupContent);
 }
