@@ -689,6 +689,12 @@ header {
         flex-direction: column;
         width: 100%;
         background-color: #353436;
+        font-size: 1.2rem;
+    }
+
+    .menu a {
+        display: block;
+        height: 10vh;
     }
 
     .logo {
@@ -699,15 +705,7 @@ header {
         max-width: 100%;
         height: auto;
     }
-
-}
-
-@media only screen and (max-width: 420px) {
-
-    .slide img {
-        max-width: 100%;
-        height: auto;
-    }
+<<<<<<< HEAD
 }
 
 /*responsive footer*/
@@ -753,6 +751,9 @@ header {
 
 @media only screen and (max-width: 890px) {
 
+=======
+
+>>>>>>> 844e3ac1545eabab48a1351c5214f07c449b7c5e
     .toggle {
         position: absolute;
         cursor: pointer;
@@ -790,9 +791,36 @@ header {
     .form {
         flex-direction: column;
     }
+}
 
-    .menu a {
+@media only screen and (max-width: 420px) {
+
+    .slide img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/*responsive footer*/
+@media only screen and (max-width: 700px) {
+    .row {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .newsletter_body input {
+        width: 100%;
+    }
+
+    .newsletter_body button {
+        height: 9vh;
+        font-size: 1.3em;
+    }
+
+    .toggle:checked + .menu {
         display: block;
-        height: 10vh;
+    }
+    .block {
+        margin: 15px 0;
     }
 }

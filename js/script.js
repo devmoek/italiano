@@ -97,6 +97,7 @@ function changeToggle(e) {
     e.classList.toggle("change");
 }
 
+<<<<<<< HEAD
 
 // dropup button menu 
 let icon = document.querySelector('.dropbtn');
@@ -120,3 +121,15 @@ icon.onclick = function () {
    icon.classList.toggle('fa-chevron-down');
    dropupContent.classList.toggle('show');
 }
+=======
+/*
+function hamburger() {
+    let e = document.getElementsByClassName("menu")
+    if (e.style.display === "block") {
+        e.style.display = "none";
+    } else {
+        e.style.display = "block";
+    }
+}
+*/
+>>>>>>> 844e3ac1545eabab48a1351c5214f07c449b7c5e
