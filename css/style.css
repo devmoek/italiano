@@ -705,7 +705,6 @@ header {
         max-width: 100%;
         height: auto;
     }
-<<<<<<< HEAD
 }
 
 /*responsive footer*/
@@ -751,9 +750,6 @@ header {
 
 @media only screen and (max-width: 890px) {
 
-=======
-
->>>>>>> 844e3ac1545eabab48a1351c5214f07c449b7c5e
     .toggle {
         position: absolute;
         cursor: pointer;
