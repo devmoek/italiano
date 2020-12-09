@@ -91,7 +91,7 @@ for (let item of items) {
 }
 document.addEventListener("click", closeSubmenu, false);
 
-// hamburger menu
+// hamburger menu animation
 
 function changeToggle(e) {
     e.classList.toggle("change");

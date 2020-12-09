@@ -22,7 +22,7 @@ header {
 
 .menu a {
     color: #fff;
-    outline: none;
+   /* outline: none; */
     display: block;
 }
 .menu a:hover {
@@ -62,7 +62,7 @@ header {
     color: #fff;
     text-transform: uppercase;
     cursor: pointer;
-    outline: none;
+   /* outline: none; */
 }
 
 .reserve button:hover {
@@ -131,7 +131,7 @@ header {
 }
 
 .form input {
-    outline: 0;
+  /*  outline: 0; */
     background: #fff;
     width: 100%;
     border: 0;
@@ -166,7 +166,7 @@ header {
 
 .form button {
     text-transform: uppercase;
-    outline: 0;
+   /* outline: 0; */
     background: #000;
     width: 100%;
     border: 0;
@@ -174,8 +174,6 @@ header {
     color: #fff;
     font-size: 1.5625rem;
     cursor: pointer;
-    -webkit-transition: all 0.3 ease;
-    transition: all 0.3 ease;
     margin: 0 0 15px 0;
     line-height: 1.33;
 }
@@ -273,7 +271,6 @@ header {
 .submenu-active .submenu {
     display: block;
     position: absolute;
-    top: 60px;
     z-index: 999;
     background: #353436;
 }
@@ -315,7 +312,7 @@ header {
 
 .slide img {
     width: 100%;
-    height: 970px; 
+    height: 970px;
 }
 
 /*text block on slides*/
@@ -349,7 +346,7 @@ header {
     justify-content: center;
 }
 
-.navigation-manual, 
+.navigation-manual,
 .navigation-auto {
     position: absolute;
     bottom: 100px;
@@ -431,7 +428,7 @@ header {
 }
 
 .dropup__content {
-    align-items: center; 
+    align-items: center;
 }
 
 .dropbtn {
@@ -440,7 +437,7 @@ header {
     text-align: center;
     font-size: 2rem;
     cursor: pointer;
-    outline: none;
+   /* outline: none; */
     border: none;
     width: 60px;
 }
@@ -520,7 +517,7 @@ header {
 }
 
 .newsletter input {
-    outline: 0;
+   /* outline: 0; */
     background: #fff;
     border: 0;
     margin: 0 0 15px;
@@ -536,7 +533,7 @@ header {
 
 .newsletter button {
     text-transform: uppercase;
-    outline: 0;
+    /*outline: 0; */
     background: #000;
     width: 100%;
     height: 6vh;
@@ -544,7 +541,6 @@ header {
     color: #fff;
     font-size: 1.0625rem;
     cursor: pointer;
-    transition: all 0.3 ease;
 }
 
 .newsletter button:hover {
@@ -606,14 +602,16 @@ header {
 }
 
 .toggle {
-    visibility: hidden;
+    display: none;
 }
 
 .toggle a {
     color: #fff;
 }
 
-.bar1, .bar2, .bar3 {
+.bar1,
+.bar2,
+.bar3 {
     width: 35px;
     height: 5px;
     background-color: #fff;
@@ -646,7 +644,7 @@ header {
     transform: rotate(90deg);
   }
   #menu__toggle:checked ~ .submenu {
-    visibility: visible;
+    display: block;
     left: 0;
   }
 
@@ -665,7 +663,7 @@ header {
         max-width: 100%;
         height: auto;
     }
-}  
+}
 
 @media only screen and (max-width: 890px) {
 
@@ -673,7 +671,7 @@ header {
         position: absolute;
         cursor: pointer;
         right: 1%;
-        visibility: visible;
+        display: block;
         top: 75px;
     }
 
@@ -705,6 +703,7 @@ header {
     }
 
     .menu {
+        display: none;
         flex-direction: column;
         width: 100%;
         background-color: #353436;
@@ -763,7 +762,7 @@ header {
     }
 
     .dropup__items p,
-    dropup__items span  {
+    .dropup__items span  {
         font-size: 0.8em;
     }
 

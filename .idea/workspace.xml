@@ -83,6 +83,7 @@
       <workItem from="1605699033016" duration="4582000" />
       <workItem from="1605869381751" duration="2236000" />
       <workItem from="1606313266946" duration="273000" />
+      <workItem from="1607502721387" duration="4261000" />
     </task>
     <servers />
   </component>
@@ -103,27 +104,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="586" y="198" key="#Inspections" timestamp="1604936337619">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="586" y="198" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1604936337619" />
-    <state x="700" y="353" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1604810394558">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="700" y="353" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040@0.0.1920.1040" timestamp="1604810394558" />
-    <state x="461" y="164" key="SettingsEditor" timestamp="1604811616916">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1604811616916" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1605194703134">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1605194703134" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1604937906459">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1604937906459" />
   </component>
 </project>
