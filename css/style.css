@@ -5,15 +5,7 @@
     text-decoration: none;
 }
 
-/*
-.main {
-    max-width: 100
-    margin: 0 auto;
-}
-*/
-
 header {
-/* width: 100%; */
     height: 130px;
     background-color: #353436;
     font-family: sans-serif;
@@ -92,11 +84,7 @@ header {
     transform: translate(-50%, -50%) scale(0);
     transition: 200ms ease-in-out;
     z-index: 10;
-    /*
-    background-color: #fff;
-    width: 900px;
-    max-width: 80%;
-    */
+    overflow: hidden;
 }
 
 .modal.active {
@@ -128,6 +116,10 @@ header {
     display: flex;
     background: #353436;
     color: #fff;
+}
+
+.login-page button:hover {
+    color: #000;
 }
 
 .form {
@@ -172,7 +164,6 @@ header {
     line-height: 2.4;
 }
 
-/*noinspection CssInvalidPropertyValue*/
 .form button {
     text-transform: uppercase;
     outline: 0;
@@ -230,10 +221,6 @@ header {
     opacity: 0.5;
     pointer-events: all;
     z-index: 5;
-    /*
-    width: 100%;
-    height: 100%;
-    */
 }
 
 /* navbar */
@@ -251,9 +238,11 @@ header {
     border-bottom: 1px solid #fff;
     line-height: 2.5rem;
 }
+
 .submenu .last a {
     border-bottom: 0;
 }
+
 .submenu a:hover {
     width: 100%;
     content: "";
@@ -277,13 +266,6 @@ header {
     padding-left: 5px;
 }
 
-/*
-.submenu-active {
-    border-radius: 3px;
-    justify-content: center;
-}
-*/
-
 .button {
     order: 2;
 }
@@ -298,7 +280,6 @@ header {
 
 .item {
     height: auto;
-    
 }
 
 .active .item {
@@ -336,6 +317,7 @@ header {
     width: 100%;
     height: 970px; 
 }
+
 /*text block on slides*/
 .box {
     position: absolute;
@@ -350,7 +332,6 @@ header {
     text-transform: uppercase;
     font-size: 1.1vw;
     color: #020202;
-    
 }
 
 .box p {
@@ -359,8 +340,6 @@ header {
     font-family: sans-serif;
     color: #000;
 }
-
-
 
 /*css for manual slide navigation*/
 .navigation-manual {
@@ -452,7 +431,7 @@ header {
 }
 
 .dropup__content {
-    align-items: center; /*объединить*/
+    align-items: center; 
 }
 
 .dropbtn {
@@ -470,7 +449,7 @@ header {
     display: flex;
     width: 100%;
     justify-content: center;
-    height: 20vh;
+   /* height: 20vh;*/
 }
 
 .dropup__content {
@@ -482,12 +461,12 @@ header {
 }
 
 .dropup__items h4 {
-    font-size: 2em;
+    font-size: 1.6em;
     padding: 0 10px;
 }
 
 .dropup__items p {
-    font-size: 1em;
+    font-size: 1.2em;
     padding: 0 15px;
 }
 
@@ -509,7 +488,6 @@ header {
 }
 
 /* footer */
-
 .pageFooter {
     width: 100%;
     padding-top: 40px;
@@ -528,7 +506,6 @@ header {
 }
 
 /* block elements*/
-
 .block h3 {
     text-transform: uppercase;
     margin-bottom: 15px;
@@ -557,7 +534,6 @@ header {
     color: #b5b4b4;
 }
 
-/*noinspection ALL*/
 .newsletter button {
     text-transform: uppercase;
     outline: 0;
@@ -568,7 +544,6 @@ header {
     color: #fff;
     font-size: 1.0625rem;
     cursor: pointer;
-    /*-webkit-transition: all 0.3 ease; */
     transition: all 0.3 ease;
 }
 
@@ -648,7 +623,6 @@ header {
 }
 
 .change .bar1 {
-    /*-webkit-transform: rotate(-45deg) translate(-9px, 6px); */
     transform: rotate(-45deg) translate(-9px, 6px);
 }
 
@@ -657,9 +631,24 @@ header {
 }
 
 .change .bar3 {
-   /* -webkit-transform: rotate(45deg) translate(-8px, -8px); */
     transform: rotate(45deg) translate(-8px, -8px);
 }
+
+#menu__toggle:checked ~ .toggle > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked ~ .toggle > span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+  #menu__toggle:checked ~ .toggle > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .submenu {
+    visibility: visible;
+    left: 0;
+  }
 
 .button.secondary {
     /* divider between buttons and menu links */
@@ -676,77 +665,7 @@ header {
         max-width: 100%;
         height: auto;
     }
-    /*
-    .logo img {
-        max-width: 100%;
-        height: auto;
-    } */
-}
-
-@media screen and (max-width: 890px) {
-
-    .menu {
-        flex-direction: column;
-        width: 100%;
-        background-color: #353436;
-        font-size: 1.2rem;
-    }
-
-    .menu a {
-        display: block;
-        height: 10vh;
-    }
-
-    .logo {
-        height: auto;
-    }
-
-    .slide img {
-        max-width: 100%;
-        height: auto;
-    }
-}
-
-/*responsive footer*/
-@media only screen and (max-width: 700px) {
-
-    .row {
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .newsletter_body input {
-        width: 100%;
-    }
-
-    .newsletter_body button {
-        height: 15vh;
-        font-size: 1.3em;
-    }
-
-    .toggle:checked + .menu {
-        display: block;
-    }
-    .block {
-        margin: 15px 0;
-    }
-}
-
-/*social icons*/
-.fa-facebook-square:before {
-    content: "\f082";
-    font-size: 25px;
-}
-
-.fa-instagram:before {
-    content: "\f16d";
-    font-size: 25px;
-}
-
-.fa-pinterest-p:before {
-    content: "\f231";
-    font-size: 25px;
-}
+}  
 
 @media only screen and (max-width: 890px) {
 
@@ -755,10 +674,7 @@ header {
         cursor: pointer;
         right: 1%;
         visibility: visible;
-    }
-
-    .modal {
-        overflow: hidden;
+        top: 75px;
     }
 
     .modal-header__title {
@@ -787,6 +703,48 @@ header {
     .form {
         flex-direction: column;
     }
+
+    .menu {
+        flex-direction: column;
+        width: 100%;
+        background-color: #353436;
+        font-size: 1.2rem;
+        align-items: center;
+    }
+
+    .menu a {
+        display: block;
+        height: 10vh;
+    }
+
+    .slide img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .dropup__items h4 {
+        font-size: 1.3em;
+    }
+
+    .dropup__items p {
+        font-size: 0.8em;
+    }
+
+    /*social icons*/
+    .fa-facebook-square:before {
+        content: "\f082";
+        font-size: 25px;
+    }
+
+    .fa-instagram:before {
+        content: "\f16d";
+        font-size: 25px;
+    }
+
+    .fa-pinterest-p:before {
+        content: "\f231";
+        font-size: 25px;
+    }
 }
 
 @media only screen and (max-width: 420px) {
@@ -799,6 +757,16 @@ header {
 
 /*responsive footer*/
 @media only screen and (max-width: 700px) {
+
+    .dropup__items h4 {
+        font-size: 0.9em;
+    }
+
+    .dropup__items p,
+    dropup__items span  {
+        font-size: 0.8em;
+    }
+
     .row {
         flex-direction: column;
         justify-content: center;
