@@ -91,13 +91,6 @@ for (let item of items) {
 }
 document.addEventListener("click", closeSubmenu, false);
 
-// hamburger menu animation
-
-function changeToggle(e) {
-    e.classList.toggle("change");
-}
-
-
 // dropup button menu 
 let icon = document.querySelector('.dropbtn');
 let dropupContent = document.querySelector('.dropup__content');

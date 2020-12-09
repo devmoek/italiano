@@ -22,8 +22,8 @@ header {
 
 .menu a {
     color: #fff;
-   /* outline: none; */
     display: block;
+
 }
 .menu a:hover {
     color: #e2d1a6;
@@ -31,10 +31,11 @@ header {
 
 .menu li {
     padding-right: 2em;
+    z-index: 999;
 }
 
-.menu li.sub_item a {
-    z-index: 999;
+#menu__toggle {
+    display: none;
 }
 
 .logo {
@@ -62,7 +63,6 @@ header {
     color: #fff;
     text-transform: uppercase;
     cursor: pointer;
-   /* outline: none; */
 }
 
 .reserve button:hover {
@@ -131,7 +131,6 @@ header {
 }
 
 .form input {
-  /*  outline: 0; */
     background: #fff;
     width: 100%;
     border: 0;
@@ -166,7 +165,6 @@ header {
 
 .form button {
     text-transform: uppercase;
-   /* outline: 0; */
     background: #000;
     width: 100%;
     border: 0;
@@ -437,7 +435,6 @@ header {
     text-align: center;
     font-size: 2rem;
     cursor: pointer;
-   /* outline: none; */
     border: none;
     width: 60px;
 }
@@ -446,7 +443,6 @@ header {
     display: flex;
     width: 100%;
     justify-content: center;
-   /* height: 20vh;*/
 }
 
 .dropup__content {
@@ -533,7 +529,6 @@ header {
 
 .newsletter button {
     text-transform: uppercase;
-    /*outline: 0; */
     background: #000;
     width: 100%;
     height: 6vh;
@@ -601,53 +596,6 @@ header {
     align-items: center;
 }
 
-.toggle {
-    display: none;
-}
-
-.toggle a {
-    color: #fff;
-}
-
-.bar1,
-.bar2,
-.bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: #fff;
-    margin: 6px 0;
-    transition: 0.4s;
-    border-radius: 5px;
-}
-
-.change .bar1 {
-    transform: rotate(-45deg) translate(-9px, 6px);
-}
-
-.change .bar2 {
-    opacity: 0;
-}
-
-.change .bar3 {
-    transform: rotate(45deg) translate(-8px, -8px);
-}
-
-#menu__toggle:checked ~ .toggle > span {
-    transform: rotate(45deg);
-  }
-  #menu__toggle:checked ~ .toggle > span::before {
-    top: 0;
-    transform: rotate(0);
-  }
-  #menu__toggle:checked ~ .toggle > span::after {
-    top: 0;
-    transform: rotate(90deg);
-  }
-  #menu__toggle:checked ~ .submenu {
-    display: block;
-    left: 0;
-  }
-
 .button.secondary {
     /* divider between buttons and menu links */
     border-bottom: 1px #444 solid;
@@ -666,14 +614,6 @@ header {
 }
 
 @media only screen and (max-width: 890px) {
-
-    .toggle {
-        position: absolute;
-        cursor: pointer;
-        right: 1%;
-        display: block;
-        top: 75px;
-    }
 
     .modal-header__title {
         font-size: 0.5rem;
@@ -702,31 +642,90 @@ header {
         flex-direction: column;
     }
 
-    .menu {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #353436;
-        font-size: 1.2rem;
+/*hamburger menu*/
+    #menu__toggle {
+        opacity: 0;
+    }
+
+    #menu__toggle:checked ~ .menu__btn > span {
+        transform: rotate(45deg);
+    }
+    #menu__toggle:checked ~ .menu__btn > span::before {
+        top: 0;
+        transform: rotate(0);
+    }
+    #menu__toggle:checked ~ .menu__btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+    #menu__toggle:checked ~ .menu {
+        visibility: visible;
+        right: 0;
+    }
+
+    .toggle {
+        position: absolute;
+        cursor: pointer;
+        right: 1%;
+        visibility: visible;
+        top: 75px;
+    }
+
+    .menu__btn {
+        display: flex;
         align-items: center;
+        position: fixed;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        z-index: 9999;
+        right: 1%;
     }
 
-    .menu a {
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
         display: block;
-        height: 10vh;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        transition-duration: .25s;
     }
 
-    .slide img {
-        max-width: 100%;
-        height: auto;
+    .menu__btn > span::before {
+        content: '';
+        top: -8px;
     }
 
-    .dropup__items h4 {
-        font-size: 1.3em;
+    .menu__btn > span::after {
+        content: '';
+        top: 8px;
     }
 
-    .dropup__items p {
-        font-size: 0.8em;
+    .menu {
+        display: block;
+        position: fixed;
+        z-index: 9998;
+        text-align: center;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        height: 100%;
+        margin: 0;
+        padding: 80px 0;
+        list-style: none;
+        background-color: #353436;
+        box-shadow: 1px 0 6px rgba(0, 0, 0, .2);
+        transition-duration: .25s;
+    }
+
+    .menu li {
+        padding: 25px 0;
+    }
+
+    .submenu-active .submenu {
+
     }
 
     /*social icons*/

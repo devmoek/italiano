@@ -73,33 +73,36 @@
             </div>
             <div id="overlay"></div>
         </div>
+
         <nav id="navMenu">
-                <div class="toggle" onclick="changeToggle(this);">
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                    <div class="bar3"></div>
-                </div>
-            <ul class="menu">
-                <li>
-                    <a href="#">Home</a>
+            <div class="hamburger-menu">
+                <input id="menu__toggle" type="checkbox" />
+                <label class="menu__btn" for="menu__toggle">
+                    <span></span>
+                </label>
 
-                </li>
-                <li class="item has-submenu">
+                <ul class="menu">
+                    <li>
+                        <a href="#">Home</a>
 
-                    <a href="#">Azienda</a>
-                    <ul class="submenu menu__dropdown">
-                        <li class="sub_item"><a href="#">Storia</a></li>
-                        <li class="sub_item"><a href="#">MM Design</a></li>
-                        <li class="sub_item"><a href="#">Designer</a></li>
-                        <li class="sub_item last"><a href="#">Certificazioni</a></li>
-                    </ul>
-                </li>
+                    </li>
+                    <li class="item has-submenu">
 
-                <li><a href="#">Collezioni</a></li>
-                <li><a href="#">News</a></li>
-                <li><a href="#">Contati</a></li>
+                        <a href="#">Azienda</a>
+                        <ul class="submenu menu__dropdown toggle">
+                            <li class="sub_item"><a href="#">Storia</a></li>
+                            <li class="sub_item"><a href="#">MM Design</a></li>
+                            <li class="sub_item"><a href="#">Designer</a></li>
+                            <li class="sub_item last"><a href="#">Certificazioni</a></li>
+                        </ul>
+                    </li>
 
-            </ul>
+                    <li><a href="#">Collezioni</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Contati</a></li>
+
+                </ul>
+            </div>
         </nav>
     </header>
 
