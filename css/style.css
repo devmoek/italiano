@@ -15,9 +15,9 @@ header {
 
 .menu {
     display: flex;
-    list-style: none;
-    cursor: pointer;
     justify-content: flex-end;
+    list-style: none;
+    margin: 15px;
 }
 
 .menu a {
@@ -30,8 +30,7 @@ header {
 }
 
 .menu li {
-    padding-right: 2em;
-    z-index: 999;
+    padding: 0 10px;
 }
 
 #menu__toggle {
@@ -83,7 +82,7 @@ header {
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
     transition: 200ms ease-in-out;
-    z-index: 10;
+    z-index: 9900;
     overflow: hidden;
 }
 
@@ -112,8 +111,6 @@ header {
 
 /* popup form */
 .login-page {
-    padding: 10px 15px;
-    display: flex;
     background: #353436;
     color: #fff;
 }
@@ -126,14 +123,11 @@ header {
     position: relative;
     z-index: 1;
     padding: 45px;
-    text-align: center;
     display: flex;
 }
 
 .form input {
-    background: #fff;
     width: 100%;
-    border: 0;
     margin: 0 0 15px;
     padding: 15px;
     font-size: 1.125rem;
@@ -143,6 +137,32 @@ header {
 .form h2 {
     margin: 15px;
     text-align: left;
+}
+
+.form button {
+    text-transform: uppercase;
+    background: #000;
+    width: 100%;
+    padding: 15px;
+    font-size: 1.5625rem;
+    margin: 0 0 15px 0;
+}
+
+.form button:hover, .form button:active, .form button:focus {
+    background-color: #e2d1a6;
+}
+
+.form a,
+.preference {
+    display: flex;
+}
+
+.form a,
+.form label {
+    font-family: OpenSans, sans-serif;
+    font-size: 0.875rem;
+    color: #b5b4b4;
+    text-transform: none;
 }
 
 .login-form {
@@ -163,41 +183,11 @@ header {
     line-height: 2.4;
 }
 
-.form button {
-    text-transform: uppercase;
-    background: #000;
-    width: 100%;
-    border: 0;
-    padding: 15px;
-    color: #fff;
-    font-size: 1.5625rem;
-    cursor: pointer;
-    margin: 0 0 15px 0;
-    line-height: 1.33;
-}
-
-.form button:hover, .form button:active, .form button:focus {
-    background-color: #e2d1a6;
-}
-
-.form a,
-.preference {
-    display: flex;
-}
-
-.form a,
-.form label {
-    font-family: OpenSans, sans-serif;
-    font-size: 0.875rem;
-    color: #b5b4b4;
-    text-transform: none;
-}
-
 #data,
 #newsletter,
 #newsletters{
     width: 5%;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 /*popup overlay*/
@@ -221,13 +211,7 @@ header {
 
 /* navbar */
 .submenu {
-    list-style-type: none;
     display: none;
-}
-
-.submenu li {
-    width: 100%;
-    padding: 0 10px;
 }
 
 .submenu a{
@@ -251,44 +235,16 @@ header {
     overflow: hidden;
 }
 
-.has-submenu i {
-    font-size: 0.75rem;
-}
-
-.has-submenu > a::after {
-    font-size: 0.75rem;
-    line-height: 16px;
-    font-weight: 900;
-    padding-left: 5px;
-}
-
-.button {
-    order: 2;
-}
-
 .submenu-active .submenu {
     display: block;
     position: absolute;
     z-index: 999;
     background: #353436;
-}
-
-.item {
-    height: auto;
-}
-
-.active .item {
-    display: block;
-}
-
-.item.button {
-    padding: 9px 5px;
+    list-style: none;
 }
 
 /* slider */
 .slider {
-    width: 100%;
-    height: auto;
     overflow: hidden;
     position: relative;
 }
@@ -310,22 +266,22 @@ header {
 
 .slide img {
     width: 100%;
-    height: 970px;
+    height: auto;
 }
 
 /*text block on slides*/
 .box {
     position: absolute;
     background: #fff;
-    opacity: 0.9;
+    opacity: 0.8;
     padding-left: 15px;
     right: 0;
     bottom: 50%;
 }
 
-.box h1 {
+.box h2 {
     text-transform: uppercase;
-    font-size: 1.1vw;
+    font-size: 1.7vw;
     color: #020202;
 }
 
@@ -346,7 +302,6 @@ header {
 
 .navigation-manual,
 .navigation-auto {
-    position: absolute;
     bottom: 100px;
 }
 
@@ -417,7 +372,6 @@ header {
 .dropup {
     width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     flex-direction: column;
@@ -430,9 +384,7 @@ header {
 }
 
 .dropbtn {
-    color: #000;
-    background-color: #fff;
-    text-align: center;
+
     font-size: 2rem;
     cursor: pointer;
     border: none;
@@ -441,12 +393,11 @@ header {
 
 .show {
     display: flex;
-    width: 100%;
     justify-content: center;
 }
 
 .dropup__content {
-       display: none;
+    display: none;
 }
 
 .dropup__items {
@@ -454,7 +405,7 @@ header {
 }
 
 .dropup__items h4 {
-    font-size: 1.6em;
+    font-size: 2em;
     padding: 0 10px;
 }
 
@@ -465,7 +416,7 @@ header {
 
 .dropup__items span {
     float: right;
-    padding: 0 15px;
+    padding: 10px 15px;
 }
 
 .dropup__items:first-child {
@@ -482,9 +433,7 @@ header {
 
 /* footer */
 .pageFooter {
-    width: 100%;
     padding-top: 40px;
-    height: auto;
     background-color: #353436;
     color: #fff;
 }
@@ -513,13 +462,9 @@ header {
 }
 
 .newsletter input {
-   /* outline: 0; */
-    background: #fff;
-    border: 0;
     margin: 0 0 15px;
     padding: 15px;
     font-size: 0.875rem;
-    color: #b5b4b4;
 }
 
 .newsletter label {
@@ -583,10 +528,6 @@ header {
     font-size: 1.25rem;
 }
 
-.languages {
-    width: 20%;
-}
-
 .languages a {
     color: #b5b4b4;
     padding: 5px;
@@ -597,7 +538,6 @@ header {
 }
 
 .button.secondary {
-    /* divider between buttons and menu links */
     border-bottom: 1px #444 solid;
 }
 
@@ -606,15 +546,10 @@ header {
     .main {
         min-width: 100%;
     }
-
-    .slide img {
-        max-width: 100%;
-        height: auto;
-    }
 }
 
-@media only screen and (max-width: 890px) {
-
+/*responsive area riservata popup menu*/
+@media only screen and (max-width: 1250px) {
     .modal-header__title {
         font-size: 0.5rem;
     }
@@ -641,6 +576,9 @@ header {
     .form {
         flex-direction: column;
     }
+}
+
+@media only screen and (max-width: 890px) {
 
 /*hamburger menu*/
     #menu__toggle {
@@ -747,10 +685,7 @@ header {
 
 @media only screen and (max-width: 420px) {
 
-    .slide img {
-        max-width: 100%;
-        height: auto;
-    }
+
 }
 
 /*responsive footer*/
@@ -782,7 +717,12 @@ header {
     .toggle:checked + .menu {
         display: block;
     }
+
     .block {
         margin: 15px 0;
+    }
+
+    .box p {
+        font-size: 1.8vw;
     }
 }
