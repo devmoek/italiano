@@ -541,13 +541,6 @@ header {
     border-bottom: 1px #444 solid;
 }
 
-@media only screen and (min-width: 1200px) {
-
-    .main {
-        min-width: 100%;
-    }
-}
-
 /*responsive area riservata popup menu*/
 @media only screen and (max-width: 1250px) {
     .modal-header__title {
@@ -601,14 +594,20 @@ header {
         right: 0;
     }
 
+    .submenu-active .submenu {
+        position: relative;
+        background-color: #999;
+        top: 20px;
+    }
+/*
     .toggle {
-        position: absolute;
+        position: relative;
         cursor: pointer;
         right: 1%;
         visibility: visible;
         top: 75px;
     }
-
+*/
     .menu__btn {
         display: flex;
         align-items: center;
@@ -662,10 +661,6 @@ header {
         padding: 25px 0;
     }
 
-    .submenu-active .submenu {
-
-    }
-
     /*social icons*/
     .fa-facebook-square:before {
         content: "\f082";
@@ -681,11 +676,6 @@ header {
         content: "\f231";
         font-size: 25px;
     }
-}
-
-@media only screen and (max-width: 420px) {
-
-
 }
 
 /*responsive footer*/
