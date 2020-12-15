@@ -113,14 +113,3 @@ icon.onclick = function () {
    icon.classList.toggle('fa-chevron-down');
    dropupContent.classList.toggle('show');
 }
-
-/*
-function hamburger() {
-    let e = document.getElementsByClassName("menu")
-    if (e.style.display === "block") {
-        e.style.display = "none";
-    } else {
-        e.style.display = "block";
-    }
-}
-*/

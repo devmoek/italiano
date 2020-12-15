@@ -83,7 +83,6 @@ header {
     transform: translate(-50%, -50%) scale(0);
     transition: 200ms ease-in-out;
     z-index: 9900;
-    overflow: hidden;
 }
 
 .modal.active {
@@ -549,7 +548,6 @@ header {
 
     .login-form {
         margin: 0;
-        overflow: hidden !important;
     }
 
     .login-form h2,
@@ -599,15 +597,7 @@ header {
         background-color: #999;
         top: 20px;
     }
-/*
-    .toggle {
-        position: relative;
-        cursor: pointer;
-        right: 1%;
-        visibility: visible;
-        top: 75px;
-    }
-*/
+
     .menu__btn {
         display: flex;
         align-items: center;
@@ -644,6 +634,7 @@ header {
         display: block;
         position: fixed;
         z-index: 9998;
+        overflow: auto;
         text-align: center;
         top: 0;
         right: -100%;
@@ -675,6 +666,12 @@ header {
     .fa-pinterest-p:before {
         content: "\f231";
         font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .show {
+        font-size: 0.7em;
     }
 }
 
